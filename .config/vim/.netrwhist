@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/run/user/1000/pika-backup/mount/ad8c1c89/601c17-9e1b522e/home/mab/Code'
