@@ -1,0 +1,227 @@
+{
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "urgent": "",
+      "default": ""
+    },
+  
+  "persistent-workspaces": {
+    "DP-1": [ 1, 2, 3, 4, 5 ], 
+    "DP-2": [ 6, 7, 8, 9, 10 ] 
+    }  
+  },
+  
+  "custom/wayves": {
+    "format": "{}",
+    "exec": "python ~/.local/bin/wayves/wayves.py -o cava -i cava -a cava"
+  },
+
+  "cava": {
+      "framerate": 20,
+      "autosens": 1,
+      "sensitivity": 0.1,
+      "bars": 6,
+      "lower_cutoff_freq": 50,
+      "higher_cutoff_freq": 10000,
+      "method": "pipewire",
+      "source": "auto",
+      "stereo": false,
+      "sleep_timer": 1,
+      "hide_on_silence": true,
+      "reverse": false,
+      "bar_delimiter": 0,
+      "monstercat": false,
+      "waves": false,
+      "noise_reduction": 0.77,
+      "input_delay": 2,
+      "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+      "actions": {
+                 "on-click-right": "mode"
+                 }
+  },
+
+  "clock": {
+	"interval": 1,
+    //"format": " {:%I:%M %p}", // AM PM format
+    "format": " {:%H:%M:%S}", // 24H
+	"format-alt": " {:%H:%M   %Y, %d %B, %A}",
+	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+	"calendar": {
+		"mode": "year",
+		"mode-mon-col": 3,
+		"weeks-pos": "right",
+		"on-scroll": 1,
+		"format": {
+			"months": "<span color='#ffead3'><b>{}</b></span>",
+			"days": "<span color='#ecc6d9'><b>{}</b></span>",
+			"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+			"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+			"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+		}
+	}
+  },
+
+  "actions": {
+	"on-click-right": "mode",
+	"on-click-forward": "tz_up",
+	"on-click-backward": "tz_down",
+	"on-scroll-up": "shift_up",
+	"on-scroll-down": "shift_down"
+  },
+
+  "clock-alt": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+  
+  "cpu": {
+    
+    
+    "interval": 1,
+    "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}%  ",
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ]
+  },
+  
+  "custom/power": {
+    "format": " 󰐥 ",
+    "on-click": "sleep 0.15 && powermenu"
+  },
+  
+  "disk": {
+    "interval": 30,
+    "format": " {free}"
+  },
+  
+  "memory": {
+    "interval": 10,
+    "format": "  {used:0.1f}G"
+  },
+  
+  "network": {
+    "interval": 5,
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ipaddr}/{cidr}",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "睊 Disconnected",
+    "format-disabled": "睊 Disabled",
+    "format-alt": " {bandwidthUpBits} |  {bandwidthDownBits}",
+    "tooltip-format": " {ifname} via {gwaddr}"
+  },
+  
+  "custom/weather": {
+    "exec": "python ~/.config/waybar/scripts/weather.py",
+    "restart-interval": 300,
+    "return-type": "json",
+    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(cat $PRIV_ENV_FILE | grep weather_location | cut -d '=' -f 2)"
+    // "format-alt": "{alt}",
+},
+
+  // NOTE:! This is only for Arch and Arch Based Distros  depend: pacman-contrib
+  "custom/updater": {
+    "format": " {}",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "[[ $(checkupdates | wc -l) ]]",
+    "interval": 15,
+    "on-click": "foot -T update paru -Syu || yay -Syu && notify-send 'The system has been updated'",
+    "tooltip": true,
+    "tooltip-format": "Left Click: Update System\nArch Linux Only",
+  },	
+  
+  "custom/updates": {
+    "format": "󰮯 {} updates",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "[[ $(checkupdates | wc -l) ]]",
+    "interval": 15,
+    "on-click": "foot -e sudo pacman -Syu && yay && notify-send 'The system has been updated'"
+  },
+  
+  "pulseaudio-alt": {
+    "format": "{icon} {volume}",
+    "format-muted": "󰖁 Mute",
+    "format-bluetooth": " {volume}% {format_source}",
+    "format-bluetooth-muted": " Mute",
+    "format-source": " {volume}",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "󰕾",
+        "󰕾",
+        "󰕾"
+      ]
+  },
+    "scroll-step": 5.0,
+    "on-click": "pulsemixer --toggle-mute",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/.config/hypr/scripts/volume --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/volume --dec",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1, //%, can be a float
+    "format": "{icon} {volume}",
+    "format-muted": "󰖁",
+    "format-icons": {
+    "default": ["", "", "󰕾"]
+  },
+    "tooltip-format": "{volume}% volume"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 6
+  },
+  
+  "temperature": {
+    "format": "{temperatureC}°C "
+  },
+}
+

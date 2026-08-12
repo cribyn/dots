@@ -1,0 +1,38 @@
+[{
+  "include": "~/.config/waybar/modules.jsonc",
+  "layer": "top",
+  //"mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 5,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-left": 0,
+  "margin-right": 0,
+  "output": "DP-1",
+
+  "modules-left": ["custom/power", "hyprland/workspaces", "cpu", "memory", "custom/updater"],
+  "modules-center": ["custom/wayves"],
+  "modules-right": ["clock"],
+},
+{
+  "include": "~/.config/waybar/modules.jsonc",
+  "layer": "top",
+  //"mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 5,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-left": 0,
+  "margin-right": 0,
+  "output": "DP-2",
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["cava"],
+  "modules-right": ["pulseaudio", "tray"],
+},
+]
+

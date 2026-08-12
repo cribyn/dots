@@ -1,0 +1,154 @@
+* {
+    font-family: Maple Mono NF;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+
+#window {
+    padding: 0 33px;
+    color: #98971a;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces button {
+    padding: 0 5px 0 10px;
+    background-color: transparent;
+    color: #5d6b66;
+    transition-property: color;
+    transition-duration: 0.35s;
+    border-radius: 50%;
+}
+
+#workspaces button.active {
+    color: #98971a;
+}
+
+#workspaces button.urgent {
+    background-color: #c9a0dc;
+    color: #000000;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Common Widget Styles */
+
+#clock,
+#cpu,
+#custom-clock,
+#custom-pacman,
+#custom-power,
+#custom-updater,
+#custom-wayves,
+#custom-weather,
+#memory,
+#pulseaudio,
+#tray,
+#window,
+#workspaces,
+
+
+
+#pulseaudio {
+    padding: 0 15px;
+    margin-right: 8px;
+    border-radius: 10px;
+    border: 2px solid #98971a;
+    background-color: #232136;
+}
+
+/* Individual Widget Styles */
+
+#custom-wayves {
+    color: #98971a;
+}        
+
+/* Clock instance which displays the date */
+#clock.date {
+    color: #eb6f92;
+    margin-right: 8px;
+}
+
+#custom-clock {
+    color: #eb6f92;
+    margin-right: 8px;
+}
+
+#custom-updater {
+    color: #dbbc7f;
+    font-weight: 600;
+}
+
+#custom-pacman {
+   color: #f6c177;
+   font-weight: 600;
+}
+
+#custom-power {
+  color: #3e8fb0;
+
+}
+
+#custom-weather.severe {
+    color: #eb937d;
+}
+
+#custom-weather.sunnyDay {
+    color: #c2ca76;
+}
+
+#custom-weather.clearNight {
+    color: #2b2b2a;
+}
+
+#custom-weather.cloudyFoggyDay, #custom-weather.cloudyFoggyNight {
+    color: #c2ddda;
+}
+
+#custom-weather.rainyDay, #custom-weather.rainyNight {
+    color: #5aaca5;
+}
+
+#custom-weather.snowyIcyDay, #custom-weather.snowyIcyNight {
+    color: #d6e7e5;
+}
+
+#custom-weather.default {
+    color: #dbd9d8;
+}
+
+#cpu {
+   padding: 0 15px;
+   color: #e69875;
+}
+
+#memory {
+   padding: 0 15px;
+   color: #3e8fb0;
+}
+
+#pulseaudio {
+    color: #83c092;
+}
+
+#clock { 
+    color: #e67e80;
+    margin-right: 8px;
+}
+
+#tray {
+    color: #f85552;
+}
+
