@@ -1,0 +1,6 @@
+2026/08/12-10:14:58.678 2ff1 Reusing MANIFEST /home/mab/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2026/08/12-10:14:58.686 2ff1 Recovering log #129
+2026/08/12-10:14:58.686 2ff1 Reusing old log /home/mab/.config/vesktop/sessionData/Local Storage/leveldb/000129.log 
+2026/08/12-10:15:58.688 301f Level-0 table #134: started
+2026/08/12-10:15:58.698 301f Level-0 table #134: 28922 bytes OK
+2026/08/12-10:15:58.703 301f Delete type=0 #129
